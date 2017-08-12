@@ -4,8 +4,7 @@ var path = require('path');
 
 var app = express();
 var articles = {
-    articleOne: 
-    {
+    'article-one': {
         title: 'Article One | Surender Singh',
         heading: 'Article One',
         date: "July 12th 2017",
@@ -20,8 +19,7 @@ var articles = {
                         This is Singo!!!!.I am the Actor of Ennai Nokki Paayum Thotta.The stills which I have posed in this Movie is going viral and Hopefully the first day collection would be above 100 crore
                         </p>`
 },
-    articleTwo: 
-    {
+    'article-two':  {
         title: "Article Two | Surender Singh",
         heading: "Article Two",
         date: "July 12th 2017",
@@ -31,8 +29,7 @@ var articles = {
                 </p>`
         
     },
-     articleThree: 
-     {
+    'article-three': {
         title: "Article Three | Surender Singh",
         heading: "Article Three",
         date: "July 12th 2017",
@@ -82,8 +79,9 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get(':/articleName', function (req, res) {
-  res.send(createTemplate(article-one));
+app.get('/:articleName', function (req, res) {
+    var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two', function (req, res) {
