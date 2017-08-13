@@ -96,7 +96,7 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/favicon.ico', function (req, res) {
 res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
 });
-app.get('//favicon.ico', function (req, res) {
+app.get('/favicon.ico', function (req, res) {
 res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
 });
 
