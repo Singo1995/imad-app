@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
-/*var articles = {
+var articles = {
     'article-one': {
         title: 'Article One | Surender Singh',
         heading: 'Article One',
@@ -73,7 +73,7 @@ function createTemplate(data){
         </body>
    </html>`;
    return htmlTemplate;
-}*/
+}
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
@@ -85,10 +85,10 @@ res.sendFile(path.join(__dirname,'favicon.ico'));
 //app.get('/favicon.ico', function (req, res) {
 //res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
 //});
-/*app.get('/:articleName', function (req, res) {
+app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
-});*/
+});
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
