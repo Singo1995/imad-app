@@ -79,9 +79,9 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-/*app.get('/ui/favicon.ico', function (req, res) {
+app.get('/ui/favicon.ico', function (req, res) {
 res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
-});*/
+});
 //app.get('/favicon.ico', function (req, res) {
 //res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
 //});
