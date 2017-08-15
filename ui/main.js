@@ -4,7 +4,7 @@ element.innerHTML = "This is Theriiiii....";
 var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveRight(){
-     marginLeft += 10;
+     marginLeft += 5;
      img.style.marginLeft = marginLeft + 'px';
     
 }
