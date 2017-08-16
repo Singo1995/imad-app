@@ -3,7 +3,7 @@ var counter = 0;
 button.onclick = function(){
     //create a request object
     var request = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function(){
+    request.onreadystatechange = function(){
     if (request.readyState === XMLHttpRequest.DONE)
     {
         if(request.status===200)
