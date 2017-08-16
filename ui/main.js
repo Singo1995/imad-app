@@ -37,6 +37,7 @@ button.onclick = function()
                         if(request.status===200)
                         {
                            var names = request.responseText;
+                           var list = '';
                            names = JSON.parse(names);
                                for(i = 0;i < names.length;i++)
                                {
