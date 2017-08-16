@@ -82,9 +82,11 @@ app.get('/', function (req, res) {
 app.get('/favicon.ico', function (req, res) {
 res.sendFile(path.join(__dirname,'favicon.ico'));
 });
-//app.get('/favicon.ico', function (req, res) {
-//res.sendFile(path.join(__dirnam, 'ui','favicon.ico'));
-//});
+var counter = 0;
+app.get('/counter', function (req, res) {
+counter+=1;    
+res.send(counter.toString());
+});
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
