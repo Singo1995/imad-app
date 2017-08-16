@@ -33,4 +33,6 @@ button.onclick = function(){
    for(i = 0;i < name.length;i++){
    list += '<li>'+ names[i] + '</li>'
   }
+  var ul = document.getElementById('namelist');
+  ul.innerHTML= list;
   };
