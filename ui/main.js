@@ -48,7 +48,7 @@ button.onclick = function()
                 }
         }        
     //make the request
-    request.open('GET', 'http://surendersingh1995nov.imad.hasura-app.io/submit-name/name='+ name, true);
+    request.open('GET', 'http://surendersingh1995nov.imad.hasura-app.io/submit-name?name='+ name, true);
     request.send();
    //capture the response and convert into html
   };
